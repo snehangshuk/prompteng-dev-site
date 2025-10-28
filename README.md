@@ -5,7 +5,7 @@ This project is a Docusaurus-based training site for Prompt Engineering that tra
 ## Architecture
 
 The project consists of:
-1. **Docusaurus Frontend** - Static site hosted on GitLab Pages
+1. **Docusaurus Frontend** - Static site hosted on GitHub Pages or GitLab Pages
 2. **React Questionnaire Component** - Interactive form for student self-assessment
 3. **Backend API Server** - Node.js/Express server that forwards data to Splunk HEC
 4. **Splunk HEC** - Receives and indexes student progress data
@@ -15,7 +15,7 @@ The project consists of:
 - Node.js 18+
 - npm or yarn
 - Splunk instance with HEC endpoint configured
-- GitLab account for GitLab Pages hosting
+- GitHub or GitLab account for Pages hosting
 
 ## Setup Instructions
 
@@ -70,16 +70,83 @@ customFields: {
 },
 ```
 
-Update the `url` and `baseUrl` for your GitLab Pages:
+Update the `url` and `baseUrl` for your hosting platform:
 
+**For GitHub Pages:**
+```javascript
+url: 'https://your-github-username.github.io',
+baseUrl: '/prompteng-dev-site/',
+```
+
+**For GitLab Pages:**
 ```javascript
 url: 'https://your-gitlab-username.gitlab.io',
 baseUrl: '/prompteng-dev-site/',
 ```
 
-### 5. Deploy to GitLab Pages
+### 5. Deploy to GitHub Pages or GitLab Pages
 
-1. Initialize git repository:
+#### Option A: GitHub Pages
+
+1. Initialize git repository (if not already done):
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+2. Create a new repository on GitHub
+
+3. Push to GitHub:
+```bash
+git remote add origin https://github.com/your-username/prompteng-dev-site.git
+git push -u origin main
+```
+
+4. Create `.github/workflows/deploy.yml`:
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+```
+
+5. Enable GitHub Pages in repository settings:
+   - Go to Settings > Pages
+   - Select "Deploy from a branch"
+   - Choose `gh-pages` branch and `/ (root)` folder
+   - Save
+
+6. Push the workflow file and GitHub Actions will automatically build and deploy
+
+#### Option B: GitLab Pages
+
+1. Initialize git repository (if not already done):
 ```bash
 git init
 git add .
@@ -94,7 +161,7 @@ git remote add origin https://gitlab.com/your-username/prompteng-dev-site.git
 git push -u origin main
 ```
 
-4. GitLab CI/CD will automatically build and deploy to GitLab Pages
+4. GitLab CI/CD will automatically build and deploy to GitLab Pages using the included `.gitlab-ci.yml`
 
 ## Local Development
 
@@ -118,6 +185,9 @@ The API runs on `http://localhost:3001`.
 
 ```
 prompteng-dev-site/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml     # GitHub Actions workflow (create this)
 ├── .gitlab-ci.yml          # GitLab CI/CD configuration
 ├── docusaurus.config.js    # Docusaurus configuration
 ├── sidebars.js            # Sidebar navigation
