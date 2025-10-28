@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Track Your Learning Progress
 
-Welcome! This site helps you track your progress as you work through the **Prompt Engineering for Developers** course.
+Welcome!This site helps you track your progress as you work through the **Prompt Engineering for Developers** course.
 
 ## How It Works
 
