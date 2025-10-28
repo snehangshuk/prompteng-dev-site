@@ -1,0 +1,403 @@
+---
+title: Prompt Engineering for Developers
+description: Master prompting techniques for software development with structured tutorials, hands-on exercises, and real-world examples.
+---
+
+import Link from '@docusaurus/Link';
+
+<div style={{
+  textAlign: 'center',
+  padding: '80px 20px 60px',
+  background: 'var(--ifm-background-surface-color)'
+}}>
+  <h1 style={{
+    fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+    fontWeight: '800',
+    marginBottom: '1.5rem',
+    background: 'linear-gradient(120deg, var(--ifm-color-primary), var(--ifm-color-primary-dark))',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    letterSpacing: '-0.02em'
+  }}>
+    Prompt Engineering for Developers
+  </h1>
+  <p style={{
+    fontSize: 'clamp(1.125rem, 2.5vw, 1.375rem)',
+    color: 'var(--ifm-color-emphasis-700)',
+    maxWidth: '750px',
+    margin: '0 auto 3rem',
+    lineHeight: '1.7',
+    fontWeight: '400'
+  }}>
+    Master prompting techniques for software development with structured tutorials, hands-on exercises, and real-world examples.
+  </p>
+  
+  <div style={{
+    display: 'flex',
+    gap: '1rem',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    marginTop: '2rem'
+  }}>
+    <a
+      href="https://github.com/splunk/prompteng-devs"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        textDecoration: 'none',
+        padding: '14px 32px',
+        fontSize: '16px',
+        fontWeight: '600',
+        borderRadius: '8px',
+        background: 'var(--ifm-color-primary)',
+        color: 'white',
+        border: 'none',
+        boxShadow: '0 4px 14px 0 rgba(0,118,255,0.39)',
+        transition: 'all 0.3s ease',
+        cursor: 'pointer'
+      }}
+      onMouseOver={(e) => {
+        e.currentTarget.style.transform = 'translateY(-2px)';
+        e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,118,255,0.5)';
+      }}
+      onMouseOut={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(0,118,255,0.39)';
+      }}>
+      📚 Go to Course Repository
+    </a>
+    
+    <Link
+      to="/docs/assessments"
+      style={{
+        textDecoration: 'none',
+        padding: '14px 32px',
+        fontSize: '16px',
+        fontWeight: '600',
+        borderRadius: '8px',
+        background: 'transparent',
+        color: 'var(--ifm-color-primary)',
+        border: '2px solid var(--ifm-color-primary)',
+        transition: 'all 0.3s ease',
+        cursor: 'pointer'
+      }}
+      onMouseOver={(e) => {
+        e.currentTarget.style.background = 'var(--ifm-color-primary)';
+        e.currentTarget.style.color = 'white';
+        e.currentTarget.style.transform = 'translateY(-2px)';
+      }}
+      onMouseOut={(e) => {
+        e.currentTarget.style.background = 'transparent';
+        e.currentTarget.style.color = 'var(--ifm-color-primary)';
+        e.currentTarget.style.transform = 'translateY(0)';
+      }}>
+      ✍️ Module Assessments
+    </Link>
+
+    <Link
+      to="/docs/progress"
+      style={{
+        textDecoration: 'none',
+        padding: '14px 32px',
+        fontSize: '16px',
+        fontWeight: '600',
+        borderRadius: '8px',
+        background: 'transparent',
+        color: 'var(--ifm-color-primary)',
+        border: '2px solid var(--ifm-color-primary)',
+        transition: 'all 0.3s ease',
+        cursor: 'pointer'
+      }}
+      onMouseOver={(e) => {
+        e.currentTarget.style.background = 'var(--ifm-color-primary)';
+        e.currentTarget.style.color = 'white';
+        e.currentTarget.style.transform = 'translateY(-2px)';
+      }}
+      onMouseOut={(e) => {
+        e.currentTarget.style.background = 'transparent';
+        e.currentTarget.style.color = 'var(--ifm-color-primary)';
+        e.currentTarget.style.transform = 'translateY(0)';
+      }}>
+      📊 Progress Dashboard
+    </Link>
+  </div>
+</div>
+
+---
+
+<div style={{maxWidth: '1200px', margin: '60px auto', padding: '0 20px'}}>
+
+## Get Started in Minutes
+
+<div style={{maxWidth: '700px', margin: '3rem auto 5rem', position: 'relative'}}>
+  
+  <div style={{
+    display: 'flex',
+    gap: '1.5rem',
+    marginBottom: '1.5rem',
+    padding: '1.5rem',
+    background: 'var(--ifm-color-emphasis-100)',
+    borderRadius: '8px',
+    border: '1px solid var(--ifm-color-emphasis-200)'
+  }}>
+    <div style={{
+      fontSize: '2rem',
+      flexShrink: 0,
+      width: '50px',
+      height: '50px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: 'var(--ifm-color-primary)',
+      color: 'white',
+      borderRadius: '50%',
+      fontWeight: 'bold'
+    }}>1</div>
+    <div style={{flex: 1}}>
+      <h3 style={{margin: '0 0 0.5rem 0', fontSize: '1.25rem'}}>Clone the Repository</h3>
+      <p style={{margin: '0 0 0.75rem 0', color: 'var(--ifm-color-emphasis-700)', lineHeight: '1.5'}}>
+        Clone the course repository and set up your local environment
+      </p>
+      <code style={{
+        display: 'block',
+        padding: '0.75rem',
+        background: 'var(--ifm-background-surface-color)',
+        borderRadius: '4px',
+        fontSize: '0.875rem',
+        overflowX: 'auto'
+      }}>
+        git clone git@github.com:splunk/prompteng-devs.git
+      </code>
+    </div>
+  </div>
+
+  <div style={{
+    display: 'flex',
+    gap: '1.5rem',
+    marginBottom: '1.5rem',
+    padding: '1.5rem',
+    background: 'var(--ifm-color-emphasis-100)',
+    borderRadius: '8px',
+    border: '1px solid var(--ifm-color-emphasis-200)'
+  }}>
+    <div style={{
+      fontSize: '2rem',
+      flexShrink: 0,
+      width: '50px',
+      height: '50px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: 'var(--ifm-color-primary)',
+      color: 'white',
+      borderRadius: '50%',
+      fontWeight: 'bold'
+    }}>2</div>
+    <div style={{flex: 1}}>
+      <h3 style={{margin: '0 0 0.5rem 0', fontSize: '1.25rem'}}>Complete the Modules</h3>
+      <p style={{margin: 0, color: 'var(--ifm-color-emphasis-700)', lineHeight: '1.5'}}>
+        Work through interactive Jupyter notebooks with hands-on exercises and real-world examples
+      </p>
+    </div>
+  </div>
+
+  <div style={{
+    display: 'flex',
+    gap: '1.5rem',
+    padding: '1.5rem',
+    background: 'var(--ifm-color-emphasis-100)',
+    borderRadius: '8px',
+    border: '1px solid var(--ifm-color-emphasis-200)'
+  }}>
+    <div style={{
+      fontSize: '2rem',
+      flexShrink: 0,
+      width: '50px',
+      height: '50px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: 'var(--ifm-color-primary)',
+      color: 'white',
+      borderRadius: '50%',
+      fontWeight: 'bold'
+    }}>3</div>
+    <div style={{flex: 1}}>
+      <h3 style={{margin: '0 0 0.5rem 0', fontSize: '1.25rem'}}>Track Your Progress</h3>
+      <p style={{margin: 0, color: 'var(--ifm-color-emphasis-700)', lineHeight: '1.5'}}>
+        Return here to assess your skills and visualize your learning journey
+      </p>
+    </div>
+  </div>
+
+</div>
+
+---
+
+## 📚 Course Modules
+
+<div style={{marginTop: '2rem', marginBottom: '4rem'}}>
+  <div style={{display: 'grid', gap: '1rem'}}>
+    <div style={{padding: '1.5rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}>
+      <h4 style={{margin: '0 0 0.5rem 0'}}>Module 1: Foundations</h4>
+      <p style={{margin: 0, color: 'var(--ifm-color-emphasis-700)', fontSize: '0.95rem'}}>Environment setup & prompt anatomy • 20 min</p>
+    </div>
+    <div style={{padding: '1.5rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}>
+      <h4 style={{margin: '0 0 0.5rem 0'}}>Module 2: Core Techniques</h4>
+      <p style={{margin: 0, color: 'var(--ifm-color-emphasis-700)', fontSize: '0.95rem'}}>Role prompting, few-shot examples, chain-of-thought reasoning • 90-120 min</p>
+    </div>
+    <div style={{padding: '1.5rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}>
+      <h4 style={{margin: '0 0 0.5rem 0'}}>Module 3: Applications</h4>
+      <p style={{margin: 0, color: 'var(--ifm-color-emphasis-700)', fontSize: '0.95rem'}}>Code review, debugging, refactoring templates • 60 min</p>
+    </div>
+    <div style={{padding: '1.5rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}>
+      <h4 style={{margin: '0 0 0.5rem 0'}}>Module 4: Integration</h4>
+      <p style={{margin: 0, color: 'var(--ifm-color-emphasis-700)', fontSize: '0.95rem'}}>Custom commands & AI assistants • 30 min</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+---
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+  gap: '1.25rem',
+  marginTop: '3rem',
+  marginBottom: '3rem',
+  maxWidth: '900px',
+  margin: '3rem auto'
+}}>
+  <a
+    href="https://github.com/splunk/prompteng-devs"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      textDecoration: 'none',
+      padding: '20px',
+      borderRadius: '8px',
+      background: 'var(--ifm-color-emphasis-100)',
+      border: '1px solid var(--ifm-color-emphasis-300)',
+      transition: 'all 0.2s ease',
+      cursor: 'pointer',
+      display: 'flex',
+      flexDirection: 'column'
+    }}
+    onMouseOver={(e) => {
+      e.currentTarget.style.borderColor = 'var(--ifm-color-primary)';
+      e.currentTarget.style.transform = 'translateY(-2px)';
+    }}
+    onMouseOut={(e) => {
+      e.currentTarget.style.borderColor = 'var(--ifm-color-emphasis-300)';
+      e.currentTarget.style.transform = 'translateY(0)';
+    }}>
+    <div style={{fontSize: '32px', marginBottom: '10px'}}>📚</div>
+    <h4 style={{margin: '0 0 8px 0', fontSize: '18px'}}>Course Repository</h4>
+    <p style={{color: 'var(--ifm-color-emphasis-700)', margin: 0, fontSize: '14px', lineHeight: '1.5'}}>
+      Interactive Jupyter notebooks
+    </p>
+  </a>
+
+  <Link
+    to="/docs/assessments"
+    style={{
+      textDecoration: 'none',
+      padding: '20px',
+      borderRadius: '8px',
+      background: 'var(--ifm-color-emphasis-100)',
+      border: '1px solid var(--ifm-color-emphasis-300)',
+      transition: 'all 0.2s ease',
+      cursor: 'pointer',
+      display: 'flex',
+      flexDirection: 'column'
+    }}
+    onMouseOver={(e) => {
+      e.currentTarget.style.borderColor = 'var(--ifm-color-primary)';
+      e.currentTarget.style.transform = 'translateY(-2px)';
+    }}
+    onMouseOut={(e) => {
+      e.currentTarget.style.borderColor = 'var(--ifm-color-emphasis-300)';
+      e.currentTarget.style.transform = 'translateY(0)';
+    }}>
+    <div style={{fontSize: '32px', marginBottom: '10px'}}>✍️</div>
+    <h4 style={{margin: '0 0 8px 0', fontSize: '18px'}}>Module Assessments</h4>
+    <p style={{color: 'var(--ifm-color-emphasis-700)', margin: 0, fontSize: '14px', lineHeight: '1.5'}}>
+      Track your skills
+    </p>
+  </Link>
+
+  <Link
+    to="/docs/progress"
+    style={{
+      textDecoration: 'none',
+      padding: '20px',
+      borderRadius: '8px',
+      background: 'var(--ifm-color-emphasis-100)',
+      border: '1px solid var(--ifm-color-emphasis-300)',
+      transition: 'all 0.2s ease',
+      cursor: 'pointer',
+      display: 'flex',
+      flexDirection: 'column'
+    }}
+    onMouseOver={(e) => {
+      e.currentTarget.style.borderColor = 'var(--ifm-color-primary)';
+      e.currentTarget.style.transform = 'translateY(-2px)';
+    }}
+    onMouseOut={(e) => {
+      e.currentTarget.style.borderColor = 'var(--ifm-color-emphasis-300)';
+      e.currentTarget.style.transform = 'translateY(0)';
+    }}>
+    <div style={{fontSize: '32px', marginBottom: '10px'}}>📊</div>
+    <h4 style={{margin: '0 0 8px 0', fontSize: '18px'}}>Progress Dashboard</h4>
+    <p style={{color: 'var(--ifm-color-emphasis-700)', margin: 0, fontSize: '14px', lineHeight: '1.5'}}>
+      View your journey
+    </p>
+  </Link>
+</div>
+
+<div style={{
+  textAlign: 'center',
+  padding: '60px 20px',
+  marginTop: '60px'
+}}>
+  <h2 style={{
+    fontSize: '2rem',
+    fontWeight: '700',
+    marginBottom: '1rem',
+    color: 'var(--ifm-font-color-base)'
+  }}>
+    Ready to Begin?
+  </h2>
+  <p style={{
+    fontSize: '1.125rem',
+    color: 'var(--ifm-color-emphasis-700)',
+    marginBottom: '2rem',
+    maxWidth: '600px',
+    margin: '0 auto 2rem',
+    lineHeight: '1.6'
+  }}>
+    Start learning in the course repository and track your progress here.
+  </p>
+  <Link
+    to="/docs/intro"
+    style={{
+      display: 'inline-block',
+      color: 'var(--ifm-color-primary)',
+      fontWeight: '600',
+      fontSize: '1rem',
+      textDecoration: 'none',
+      borderBottom: '2px solid transparent',
+      transition: 'border-color 0.2s ease'
+    }}
+    onMouseOver={(e) => {
+      e.currentTarget.style.borderBottomColor = 'var(--ifm-color-primary)';
+    }}
+    onMouseOut={(e) => {
+      e.currentTarget.style.borderBottomColor = 'transparent';
+    }}>
+    Learn more →
+  </Link>
+</div>
