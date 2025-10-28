@@ -21,10 +21,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --frozen-lockfile
         
       - name: Build website
-        run: npm run build
+        run: npx docusaurus build
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
